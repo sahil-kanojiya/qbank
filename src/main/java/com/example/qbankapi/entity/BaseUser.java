@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Table(name = "base_user_tbl")
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "role", discriminatorType = DiscriminatorType.STRING)
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(callSuper = true, onlyExplicitlyIncluded = true)
 public class BaseUser extends Auditable {
 
     @Id

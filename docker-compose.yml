@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: question_bank
+      MYSQL_USER: user
+      MYSQL_PASSWORD: tagline@123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - qbank-net
+
+  qbank-api:
+    build: .
+    image: qbank-api:1.0.0
+    container_name: qbank-app
+    depends_on:
+      - mysql
+    ports:
+      - "8080:8080"
+    environment:
+      DATASOURCE_URL: jdbc:mysql://mysql:3306/question_bank
+      DATASOURCE_USERNAME: user
+      DATASOURCE_PASSWORD: tagline@123
+    networks:
+      - qbank-net
+
+volumes:
+  mysql_data:
+
+networks:
+  qbank-net:
+    driver: bridge

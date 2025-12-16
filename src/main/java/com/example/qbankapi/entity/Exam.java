@@ -12,7 +12,7 @@ import java.util.List;
 @ToString(callSuper = true)
 @Entity
 @Table(name = "exam_tbl")
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(callSuper = true, onlyExplicitlyIncluded = true)
 public class Exam extends Auditable {
 
     @Id

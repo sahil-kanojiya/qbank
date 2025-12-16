@@ -11,7 +11,7 @@ import java.util.List;
 @ToString
 @Entity
 @Table(name = "question_tbl")
-@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@EqualsAndHashCode(callSuper = true, onlyExplicitlyIncluded = true)
 public class Question extends Auditable {
 
     @Id
