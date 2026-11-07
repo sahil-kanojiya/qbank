@@ -1,5 +1,5 @@
 # Multi-stage Dockerfile for Java 21 Question Bank Tomcat Webapp
-FROM maven:3.9-eclipse-temurin-21 AS builder
+FROM maven:3.9-eclipse-temurin-26 AS builder
 WORKDIR /workspace
 COPY pom.xml .
 COPY src ./src
