@@ -45,3 +45,4 @@ build/
 
 application.properties
 **/application.properties
+!.mvn/wrapper/maven-wrapper.properties
