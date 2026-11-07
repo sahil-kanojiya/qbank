@@ -1,4 +1,4 @@
-# QBank API
+# Question Bank API
 
 Question bank management and online examination assessment service.
 

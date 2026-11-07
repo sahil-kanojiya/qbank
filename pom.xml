@@ -6,11 +6,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>q-bank-api</artifactId>
+    <artifactId>question-bank-api</artifactId>
     <version>1.0.0</version>
     <packaging>war</packaging>
 
-    <name>QuestionBank</name>
+    <name>Question Bank API</name>
     <description>Spring based Question Bank Project</description>
 
     <properties>
